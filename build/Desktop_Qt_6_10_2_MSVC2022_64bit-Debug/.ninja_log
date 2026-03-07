@@ -1,0 +1,23 @@
+# ninja log v6
+10	475	7945952897151783	Basic_Project_autogen/timestamp	4f12b3789f716b02
+10	475	7945952897151783	Basic_Project_autogen/mocs_compilation.cpp	4f12b3789f716b02
+10	475	7945952897151783	C:/Users/acd07/Documents/QT_Projects/Basic_Project/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/Basic_Project_autogen/timestamp	4f12b3789f716b02
+10	475	7945952897151783	C:/Users/acd07/Documents/QT_Projects/Basic_Project/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/Basic_Project_autogen/mocs_compilation.cpp	4f12b3789f716b02
+480	2994	7945952897931844	CMakeFiles/Basic_Project.dir/Basic_Project_autogen/mocs_compilation.cpp.obj	eccdc82288e094d1
+485	2997	7945952897976967	CMakeFiles/Basic_Project.dir/main.cpp.obj	aa957e93ea59f99a
+490	3233	7945952898026978	CMakeFiles/Basic_Project.dir/mainwindow.cpp.obj	89fbad09ada6f56c
+3234	3555	7945952925467294	Basic_Project.exe	2849d463825a8768
+30	442	7945954413520402	Basic_Project_autogen/timestamp	4f12b3789f716b02
+30	442	7945954413520402	Basic_Project_autogen/mocs_compilation.cpp	4f12b3789f716b02
+30	442	7945954413520402	C:/Users/acd07/Documents/QT_Projects/Basic_Project/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/Basic_Project_autogen/timestamp	4f12b3789f716b02
+30	442	7945954413520402	C:/Users/acd07/Documents/QT_Projects/Basic_Project/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/Basic_Project_autogen/mocs_compilation.cpp	4f12b3789f716b02
+443	2867	7945954414179306	CMakeFiles/Basic_Project.dir/Basic_Project_autogen/mocs_compilation.cpp.obj	eccdc82288e094d1
+448	2868	7945954414229415	CMakeFiles/Basic_Project.dir/main.cpp.obj	aa957e93ea59f99a
+452	3115	7945954414271182	CMakeFiles/Basic_Project.dir/mainwindow.cpp.obj	89fbad09ada6f56c
+3116	3282	7945954440911090	Basic_Project.exe	2849d463825a8768
+28	407	7945957398907845	Basic_Project_autogen/timestamp	4f12b3789f716b02
+28	407	7945957398907845	Basic_Project_autogen/mocs_compilation.cpp	4f12b3789f716b02
+28	407	7945957398907845	C:/Users/acd07/Documents/QT_Projects/Basic_Project/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/Basic_Project_autogen/timestamp	4f12b3789f716b02
+28	407	7945957398907845	C:/Users/acd07/Documents/QT_Projects/Basic_Project/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/Basic_Project_autogen/mocs_compilation.cpp	4f12b3789f716b02
+408	2749	7945957399549134	CMakeFiles/Basic_Project.dir/Basic_Project_autogen/mocs_compilation.cpp.obj	eccdc82288e094d1
+412	2750	7945957399599085	CMakeFiles/Basic_Project.dir/main.cpp.obj	aa957e93ea59f99a
