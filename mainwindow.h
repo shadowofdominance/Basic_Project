@@ -18,11 +18,10 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
-
     void on_ButtonAdd_clicked();
 
 private:
+    void AddTask();
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

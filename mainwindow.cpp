@@ -15,5 +15,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_ButtonAdd_clicked()
 {
-    QString todoGoal = ui->LineEditField->text();
+    AddTask();
 }
+
+void MainWindow::AddTask(){
+    QString task = ui->LineEditField->text();
+    if(!task.isEmpty()){
+        ui->listWidget->addItem(task);
+        ui->LineEditField->clear();
+    }
+}
+
