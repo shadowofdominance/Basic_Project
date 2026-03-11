@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <QListWidgetItem>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -20,8 +20,13 @@ public:
 private slots:
     void on_ButtonAdd_clicked();
 
+    void on_ButtonDelete_clicked();
+
+    void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
+
 private:
     void AddTask();
+    void DeleteTask();
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

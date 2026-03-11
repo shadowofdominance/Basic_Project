@@ -26,3 +26,21 @@ void MainWindow::AddTask(){
     }
 }
 
+void MainWindow::DeleteTask(){
+    QListWidgetItem* item = ui->listWidget->currentItem();
+    if(item){
+        delete item;
+    }
+}
+
+void MainWindow::on_ButtonDelete_clicked()
+{
+    DeleteTask();
+}
+
+
+void MainWindow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
+{
+    delete item;
+}
+
