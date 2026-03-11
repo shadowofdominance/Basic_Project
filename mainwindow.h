@@ -24,6 +24,8 @@ private slots:
 
     void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
 
+    void on_LineEditField_returnPressed();
+
 private:
     void AddTask();
     void DeleteTask();

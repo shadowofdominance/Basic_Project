@@ -44,3 +44,9 @@ void MainWindow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
     delete item;
 }
 
+
+void MainWindow::on_LineEditField_returnPressed()
+{
+    AddTask();
+}
+
