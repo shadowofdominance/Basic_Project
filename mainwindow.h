@@ -26,9 +26,12 @@ private slots:
 
     void on_LineEditField_returnPressed();
 
+    void on_pushButton_clicked();
+
 private:
     void AddTask();
     void DeleteTask();
+    void UpdateTaskCount();
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
