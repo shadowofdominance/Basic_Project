@@ -37,7 +37,7 @@
          <widget class="QLineEdit" name="LineEditField"/>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="ButtonClearAll">
           <property name="text">
            <string>Clear All</string>
           </property>

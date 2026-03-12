@@ -26,7 +26,7 @@ private slots:
 
     void on_LineEditField_returnPressed();
 
-    void on_pushButton_clicked();
+    void on_ButtonClearAll_clicked();
 
 private:
     void AddTask();

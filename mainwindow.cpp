@@ -18,26 +18,29 @@ void MainWindow::on_ButtonAdd_clicked()
     AddTask();
 }
 
+// Adds an element or a task in the listWidget
 void MainWindow::AddTask(){
-    QString task = ui->LineEditField->text();
+    QString task = ui->LineEditField->text(); // Accesses the text present in the line-edit
     if(!task.isEmpty()){
-        ui->listWidget->addItem(task);
+        ui->listWidget->addItem(task); // Adds the task string to the list as item
         ui->LineEditField->clear();
         UpdateTaskCount();
     }
 }
 
+// Deletes an element or a task in the listWidget
 void MainWindow::DeleteTask(){
-    QListWidgetItem* item = ui->listWidget->currentItem();
+    QListWidgetItem* item = ui->listWidget->currentItem(); // Access the selected list item
     if(item){
         delete item;
         UpdateTaskCount();
     }
 }
 
+// Updates the count of tasks everytime its called
 void MainWindow::UpdateTaskCount(){
-    int taskCount = ui->listWidget->count();
-    ui->CounterLabel->setText(QString::number(taskCount) + " tasks");
+    int taskCount = ui->listWidget->count(); // Counts the elements in the list with built-in function count()
+    ui->CounterLabel->setText(QString::number(taskCount) + " tasks"); // Changes the text of the label
 }
 
 void MainWindow::on_ButtonDelete_clicked()
@@ -45,7 +48,7 @@ void MainWindow::on_ButtonDelete_clicked()
     DeleteTask();
 }
 
-
+//When enter is clicked the task is added to the list
 void MainWindow::on_LineEditField_returnPressed()
 {
     AddTask();
@@ -56,9 +59,8 @@ void MainWindow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
 
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_ButtonClearAll_clicked()
 {
-    ui->listWidget->clear();
+    ui->listWidget->clear(); // Clears the whole list widget items with built-in function clear()
     UpdateTaskCount();
 }
-
