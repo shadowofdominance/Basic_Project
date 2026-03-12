@@ -18,7 +18,7 @@ void MainWindow::on_ButtonAdd_clicked()
     AddTask();
 }
 
-// Adds an element or a task in the listWidget
+// Adds an item or a task in the listWidget
 void MainWindow::AddTask(){
     QString task = ui->LineEditField->text(); // Accesses the text present in the line-edit
     if(!task.isEmpty()){
@@ -28,7 +28,7 @@ void MainWindow::AddTask(){
     }
 }
 
-// Deletes an element or a task in the listWidget
+// Deletes an item or a task in the listWidget
 void MainWindow::DeleteTask(){
     QListWidgetItem* item = ui->listWidget->currentItem(); // Access the selected list item
     if(item){
@@ -56,7 +56,16 @@ void MainWindow::on_LineEditField_returnPressed()
 
 void MainWindow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
 {
+    QFont font = item->font(); // fetches the font from the selected item
+    bool isCompleted = font.strikeOut();
 
+    font.setStrikeOut(!isCompleted);
+    item->setFont(font);
+
+    if(isCompleted)
+        item->setForeground(Qt::white);
+    else
+        item->setForeground(Qt::gray);
 }
 
 void MainWindow::on_ButtonClearAll_clicked()
