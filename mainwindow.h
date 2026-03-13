@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QListWidgetItem>
+#include <QCloseEvent>
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -32,6 +34,11 @@ private:
     void AddTask();
     void DeleteTask();
     void UpdateTaskCount();
+    void SaveTasks();
+    void LoadTasks();
     Ui::MainWindow *ui;
+
+protected:
+    void closeEvent(QCloseEvent *event) override;
 };
 #endif // MAINWINDOW_H

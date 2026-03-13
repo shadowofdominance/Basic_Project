@@ -1,11 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QFile>
+#include <QTextStream>
+#include <QListWidget>
+#include <QCloseEvent>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    LoadTasks();
 }
 
 MainWindow::~MainWindow()
@@ -37,6 +42,37 @@ void MainWindow::DeleteTask(){
     }
 }
 
+// Saves the items in a text file called tasks.txt
+void MainWindow::SaveTasks(){
+    QFile file("tasks.txt");
+    if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
+        QTextStream out(&file);
+
+        for(int i=0; i < ui->listWidget->count(); i++){
+            QListWidgetItem *item = ui->listWidget->item(i);
+            out << item->text() << "\n";
+        }
+
+        file.close();
+    }
+}
+
+// Loads the items from the tasks.txt file! Called when the app starts
+void MainWindow::LoadTasks(){
+    QFile file("tasks.txt");
+
+    if(file.open(QIODevice::ReadOnly | QIODevice::Text)){
+        QTextStream in(&file);
+
+        while(!in.atEnd()){
+            QString task = in.readLine();
+            ui->listWidget->addItem(task);
+        }
+
+        file.close();
+    }
+}
+
 // Updates the count of tasks everytime its called
 void MainWindow::UpdateTaskCount(){
     int taskCount = ui->listWidget->count(); // Counts the elements in the list with built-in function count()
@@ -54,6 +90,7 @@ void MainWindow::on_LineEditField_returnPressed()
     AddTask();
 }
 
+// Double click to complete the task
 void MainWindow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
 {
     QFont font = item->font(); // fetches the font from the selected item
@@ -68,8 +105,14 @@ void MainWindow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
         item->setForeground(Qt::gray);
 }
 
+// Clears everything
 void MainWindow::on_ButtonClearAll_clicked()
 {
     ui->listWidget->clear(); // Clears the whole list widget items with built-in function clear()
     UpdateTaskCount();
+}
+
+void MainWindow::closeEvent(QCloseEvent *event){
+    SaveTasks(); // Saves the tasks before closing!
+    event->accept();
 }
